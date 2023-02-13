@@ -78,9 +78,14 @@ WSGI_APPLICATION = 'apirestaurante.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'OPTIONS': {
-        'options': '-c search_path=siatasiata'
-        },
+        
+        #Si se quiere tener la base de datos en un Schemas especifico 
+        #se debera crear uno antes de desconmentar las lineas 85 a 87
+
+        #'OPTIONS': {
+        #'options': '-c search_path=siatasiata'
+        #},
+
         'NAME': 'base de datos',
         'USER' : 'siata',
         'PASSWORD' : 'siata',
