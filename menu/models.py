@@ -1,10 +1,11 @@
 from django.db import models
+from django.core.exceptions import ValidationError
 
-# Create your models here.
+    
 class Restaurante(models.Model):
     nombreRestaurante = models.CharField(max_length=200)
-    identificacionUsuario = models.CharField(max_length=200)
+    identificacionUsuario = models.IntegerField()
     menu = models.CharField(max_length=200)
     valorMenu = models.IntegerField()
-    fechaPago = models.DateTimeField(auto_now_add=True)
+    fechaPago = models.DateTimeField()
     valorPagado = models.IntegerField()

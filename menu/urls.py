@@ -1,7 +1,10 @@
-from rest_framework import routers
-from .api import RestauranteVisewsets
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+from .views import RestauranteViewSet
 
-router = routers.DefaultRouter()
-router.register('api/pagos', RestauranteVisewsets, 'Menu')
-router.register('api/pagos', RestauranteVisewsets, 'Menu')
-urlpatterns = router.urls
+router = DefaultRouter()
+router.register('api/pagos', RestauranteViewSet, basename='pagos')
+
+urlpatterns = [
+    path('', include(router.urls)),
+]
