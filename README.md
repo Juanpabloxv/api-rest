@@ -38,8 +38,12 @@ python manage.py runserver
 La aplicación incluye las siguientes validaciones en los datos de entrada:
 
 El nombre del restaurante debe ser una cadena de caracteres.
+
 La identificación de usuario debe ser un número.
+
 La fecha de pago no puede ser un día par según el decreto de administración.
+
 El valor pagado debe estar entre 1 y 1000000.
+
 El valor del menú no puede ser negativo.
   
